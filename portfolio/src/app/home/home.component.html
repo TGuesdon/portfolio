@@ -1,0 +1,10 @@
+<div id="container">
+    <div *ngIf="stateService.curtain === true" id="curtain" [class.opening]="stateService.openingCurtain === true">
+        <div id="curtain-elements">
+            <div id="open-button" (click)="stateService.openCurtain()">
+                
+            </div>
+            <div id="wip-line"></div>
+        </div>
+    </div>
+</div>
