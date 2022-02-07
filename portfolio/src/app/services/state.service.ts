@@ -7,17 +7,23 @@ export class StateService {
 
   public curtain: boolean = true;
   public openingCurtain: boolean = false;
+  public rotatingLever: boolean = false;
 
   constructor() {
 
   }
 
   public openCurtain(){
-    this.openingCurtain = true;
+    this.rotatingLever = true;
 
     setTimeout(() => {
-      this.curtain = false;
-      this.openingCurtain = false;
-    }, 2000)
+      this.openingCurtain = true;
+
+      setTimeout(() => {
+        this.curtain = false;
+        this.openingCurtain = false;
+        this.rotatingLever = false;
+      }, 2000)
+    }, 1000)
   }
 }

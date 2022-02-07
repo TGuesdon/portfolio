@@ -2,8 +2,36 @@
     <div *ngIf="stateService.curtain === true" id="curtain" [class.opening]="stateService.openingCurtain === true">
         <div id="curtain-elements">
             <div id="open-button" (click)="stateService.openCurtain()">
-                
+                <div id="open-button-elements" [class.rotating]="stateService.rotatingLever === true">
+                    <div id="bar" [class.hint]="stateService.rotatingLever === false"></div>
+                </div>
             </div>
+
+            <div class="aeration left">
+                <div class="smoke-container" *ngIf="stateService.rotatingLever === true">
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                </div>
+            </div>
+            <div class="aeration right">
+                <div class="smoke-container" *ngIf="stateService.rotatingLever === true">
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                    <div class="smoke"></div>
+                </div>
+            </div>
+
             <div id="wip-line"></div>
         </div>
     </div>
