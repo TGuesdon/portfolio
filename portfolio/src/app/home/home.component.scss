@@ -6,12 +6,12 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(180deg, rgba(68,68,68,1) 9%, rgba(51,51,51,1) 10%, rgba(68,68,68,1) 11%, rgba(68,68,68,1) 19%, rgba(51,51,51,1) 20%, rgba(68,68,68,1) 21%, rgba(68,68,68,1) 29%, rgba(51,51,51,1) 30%, rgba(68,68,68,1) 31%, rgba(68,68,68,1) 39%, rgba(51,51,51,1) 40%, rgba(68,68,68,1) 41%, rgba(68,68,68,1) 49%, rgba(51,51,51,1) 50%, rgba(68,68,68,1) 51%, rgba(68,68,68,1) 59%, rgba(51,51,51,1) 60%, rgba(68,68,68,1) 61%, rgba(68,68,68,1) 69%, rgba(51,51,51,1) 70%, rgba(68,68,68,1) 71%, rgba(68,68,68,1) 79%, rgba(51,51,51,1) 80%, rgba(68,68,68,1) 81%, rgba(68,68,68,1) 89%, rgba(51,51,51,1) 90%, rgba(68,68,68,1) 91%, rgba(68,68,68,1) 99%, rgba(51,51,51,1) 100%);
+    background: linear-gradient(180deg, rgba(158,158,158,1) 9%, rgba(100,100,100,1) 10%, rgba(158,158,158,1) 11%, rgba(158,158,158,1) 19%, rgba(100,100,100,1) 20%, rgba(158,158,158,1) 21%, rgba(158,158,158,1) 29%, rgba(100,100,100,1) 30%, rgba(158,158,158,1) 31%, rgba(158,158,158,1) 39%, rgba(100,100,100,1) 40%, rgba(158,158,158,1) 41%, rgba(158,158,158,1) 49%, rgba(100,100,100,1) 50%, rgba(158,158,158,1) 51%, rgba(158,158,158,1) 59%, rgba(100,100,100,1) 60%, rgba(158,158,158,1) 61%, rgba(158,158,158,1) 69%, rgba(100,100,100,1) 70%, rgba(158,158,158,1) 71%, rgba(158,158,158,1) 79%, rgba(100,100,100,1) 80%, rgba(158,158,158,1) 81%, rgba(158,158,158,1) 89%, rgba(100,100,100,1) 90%, rgba(158,158,158,1) 91%, rgba(158,158,158,1) 99%, rgba(100,100,100,1) 100%);
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .opening{
-    animation: opening 2s linear;
+    animation: opening 2s linear forwards;
 }
 
 @keyframes opening {
@@ -28,13 +28,32 @@
     position: relative;
 }
 
+#metal{
+    width: 100%;
+    height: 100vh;
+    opacity: 0.4;
+}
+
+#name{
+    position: absolute;
+    top: 30vh;
+    left: 15%;
+    font-family: var(--font-tag);
+    color: white;
+    text-shadow: 0 0 0.05em #fff, 0 0 0.1em #7df0ff, 0 0 0.2em #7df0ff;
+    transform: rotate(-15deg);
+    font-size: 50pt;
+    opacity: 0.8;
+    filter: blur(1px);
+}
+
 #open-button{
     position: absolute;
     top: 68vh;
-    width: 40px;
-    height: 40px;
-    left: calc(50% - 20px);
-    border-radius: 20px;
+    width: 80px;
+    height: 80px;
+    left: calc(50% - 40px);
+    border-radius: 40px;
     background: radial-gradient(circle at 2px 2px, silver, gray);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     z-index: 999;
@@ -43,9 +62,9 @@
 }
 
 #bar{
-    width: 40px;
-    height: 10px;
-    margin-left: 15px;
+    width: 100px;
+    height: 20px;
+    margin-left: 35px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     background-color: silver;
     border-top-left-radius: 5px;
@@ -76,7 +95,7 @@
 
 .rotating{
     animation: bar 1s forwards;
-    transform-origin: 20px center;
+    transform-origin: 40px center;
 }
 
 @keyframes bar {
@@ -95,8 +114,8 @@
     height: 10px;
     width: 10px;
     border-radius: 10px;
-    background-color: #222;
-    border: solid 2px #555;
+    background-color: silver;
+    border: solid 2px #888;
     box-shadow: inset 0 10px 20px rgba(0,0,0,0.19), inset 0 6px 6px rgba(0,0,0,0.23);
 }
 .aeration.left{
@@ -113,7 +132,7 @@
 
 .smoke{
     position: absolute;
-    background-color: silver;
+    background-color: #555;
     height: 10px;
     width: 10px;
     border-radius: 50%;
@@ -196,5 +215,5 @@
     top: 97vh;
     width: 100%;
     height: 3vh;
-    background: linear-gradient(105deg, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 11%, rgba(248,255,67,1) 11%, rgba(248,255,67,1) 22%, rgba(51,51,51,1) 22%, rgba(51,51,51,1) 33%, rgba(248,255,67,1) 33%, rgba(248,255,67,1) 44%, rgba(248,255,67,1) 44%, rgba(51,51,51,1) 44%, rgba(51,51,51,1) 55%, rgba(248,255,67,1) 55%, rgba(248,255,67,1) 66%, rgba(51,51,51,1) 66%, rgba(51,51,51,1) 77%, rgba(248,255,67,1) 77%, rgba(248,255,67,1) 88%, rgba(51,51,51,1) 88%);
+    background: linear-gradient(105deg, rgba(100,100,100,1) 0%, rgba(100,100,100,1) 11%, rgba(248,255,67,1) 11%, rgba(248,255,67,1) 22%, rgba(100,100,100,1) 22%, rgba(100,100,100,1) 33%, rgba(248,255,67,1) 33%, rgba(248,255,67,1) 44%, rgba(248,255,67,1) 44%, rgba(100,100,100,1) 44%, rgba(100,100,100,1) 55%, rgba(248,255,67,1) 55%, rgba(248,255,67,1) 66%, rgba(100,100,100,1) 66%, rgba(100,100,100,1) 77%, rgba(248,255,67,1) 77%, rgba(248,255,67,1) 88%, rgba(100,100,100,1) 88%);
 }
