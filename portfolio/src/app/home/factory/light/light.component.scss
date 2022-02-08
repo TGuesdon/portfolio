@@ -1,0 +1,56 @@
+#light{
+    position: absolute;
+    left: 40%;
+    width: 20%;
+    height: 30px;
+}
+
+#light-elements{
+    position: relative;
+    height: 30px;
+}
+
+#neon{
+    position: absolute;
+    width: calc(100% - 80px);
+    height: 100%;
+    left: 40px;
+    background-color: cyan;
+    animation: neon 4s infinite;
+    filter: blur(1px);
+    z-index: 200;
+}
+
+@keyframes neon {
+    from{
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5), 0 0 40px #fff, 0 0 150px rgba(0, 255, 255, 1);
+    }
+    50%{
+        box-shadow: 0 0 40px rgba(0, 255, 255, 0.5), 0 0 50px rgba(0, 255, 255, 0.5), 0 0 60px #fff, 0 0 300px rgba(0, 255, 255, 1);
+    }
+    to{
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5), 0 0 40px #fff, 0 0 150px rgba(0, 255, 255, 1);
+    }
+}
+
+#left, #right{
+    z-index: 100;
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background: radial-gradient(circle at 4px 4px, silver, gray);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#left{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+#right{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    right: 0;
+}
+
