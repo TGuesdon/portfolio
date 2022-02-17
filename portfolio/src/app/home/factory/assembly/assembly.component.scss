@@ -1,0 +1,277 @@
+#assembly{
+    position: absolute;
+    width: 60%;
+    height: 10vh;
+    top: 85vh;
+    left: 20%;
+}
+
+#assembly-elements{
+    position: relative;
+    height: 10vh;
+}
+
+#hidder{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5vh;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#top, #bottom{
+    position: absolute;
+    width: 200%;
+    height: 5vh;
+    z-index: 200;
+}
+
+#top{
+    background: linear-gradient(120deg, rgba(158,158,158,1) 9%, rgba(100,100,100,1) 10%, rgba(158,158,158,1) 11%, rgba(158,158,158,1) 19%, rgba(100,100,100,1) 20%, rgba(158,158,158,1) 21%, rgba(158,158,158,1) 29%, rgba(100,100,100,1) 30%, rgba(158,158,158,1) 31%, rgba(158,158,158,1) 39%, rgba(100,100,100,1) 40%, rgba(158,158,158,1) 41%, rgba(158,158,158,1) 49%, rgba(100,100,100,1) 50%, rgba(158,158,158,1) 51%, rgba(158,158,158,1) 59%, rgba(100,100,100,1) 60%, rgba(158,158,158,1) 61%, rgba(158,158,158,1) 69%, rgba(100,100,100,1) 70%, rgba(158,158,158,1) 71%, rgba(158,158,158,1) 79%, rgba(100,100,100,1) 80%, rgba(158,158,158,1) 81%, rgba(158,158,158,1) 89%, rgba(100,100,100,1) 90%, rgba(158,158,158,1) 91%, rgba(158,158,158,1) 99%, rgba(100,100,100,1) 100%);
+}
+
+#top.animate-forward{
+    animation: slidetop 3s linear infinite;
+}
+
+#top.animate-backward{
+    animation: slidebottom 3s linear infinite;
+}
+
+#bottom{
+    top: 5vh;
+    background: linear-gradient(60deg, rgba(158,158,158,1) 9%, rgba(100,100,100,1) 10%, rgba(158,158,158,1) 11%, rgba(158,158,158,1) 19%, rgba(100,100,100,1) 20%, rgba(158,158,158,1) 21%, rgba(158,158,158,1) 29%, rgba(100,100,100,1) 30%, rgba(158,158,158,1) 31%, rgba(158,158,158,1) 39%, rgba(100,100,100,1) 40%, rgba(158,158,158,1) 41%, rgba(158,158,158,1) 49%, rgba(100,100,100,1) 50%, rgba(158,158,158,1) 51%, rgba(158,158,158,1) 59%, rgba(100,100,100,1) 60%, rgba(158,158,158,1) 61%, rgba(158,158,158,1) 69%, rgba(100,100,100,1) 70%, rgba(158,158,158,1) 71%, rgba(158,158,158,1) 79%, rgba(100,100,100,1) 80%, rgba(158,158,158,1) 81%, rgba(158,158,158,1) 89%, rgba(100,100,100,1) 90%, rgba(158,158,158,1) 91%, rgba(158,158,158,1) 99%, rgba(100,100,100,1) 100%);
+}
+
+#bottom.animate-forward{
+    animation: slidebottom 3s linear infinite;
+}
+
+#bottom.animate-backward{
+    animation: slidetop 3s linear infinite;
+}
+
+@keyframes slidetop {
+	0% {
+		left: -100%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+
+@keyframes slidebottom {
+	0% {
+		left: 0%;
+	}
+	100% {
+		left: -100%;
+	}
+}
+
+#left-pole{
+    /* relative to assembly-elements */
+    position: absolute;
+    background: red;
+    height: 40px;
+    width: 500px;
+    top: calc(5vh - 20px);
+    left: 6%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transform-origin: 20px 20px;
+}
+
+.open-left-pole{
+    animation: left-pole-open 1.5s linear forwards;
+}
+
+.opened-left-pole{
+    transform: rotateZ(-90deg);
+}
+
+.close-left-pole{
+    animation: left-pole-close 1.5s linear forwards;
+}
+
+@keyframes left-pole-open {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(-90deg);
+    }
+}
+
+@keyframes left-pole-close {
+    from{
+        transform: rotateZ(-90deg);
+    }
+    to{
+        transform: rotateZ(0deg);
+    }
+}
+
+#right-pole{
+    /* relative to assembly-elements */
+    position: absolute;
+    background: red;
+    height: 40px;
+    width: 500px;
+    top: calc(5vh - 20px);
+    right: 6%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transform-origin: calc(100% - 20px) 20px;
+}
+
+.open-right-pole{
+    animation: right-pole-open 1.5s linear forwards;
+}
+
+.opened-right-pole{
+    transform: rotateZ(90deg);
+}
+
+.close-right-pole{
+    animation: right-pole-close 1.5s linear forwards;
+}
+
+@keyframes right-pole-open {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(90deg);
+    }
+}
+
+@keyframes right-pole-close {
+    from{
+        transform: rotateZ(90deg);
+    }
+    to{
+        transform: rotateZ(0deg);
+    }
+}
+
+#central{
+    position: absolute;
+    height: 8vh;
+    width: 98%;
+    top: 1vh;
+    left: 1%;
+    z-index: 200;
+    background-color: silver;
+    border-radius: 4vh;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#central-elements{
+    position: relative;
+    height: 8vh;
+}
+
+.crew{
+    position: absolute;
+    background: radial-gradient(circle at 4px 4px, silver, gray);
+    height: 40px;
+    width: 40px;
+    top: calc(50% - 20px);
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    z-index: 250;
+}
+
+.crew-forward{
+    animation: rotation-crew-forward 3s linear forwards;
+}
+
+.crew-backward{
+    animation: rotation-crew-backward 3s linear forwards;
+}
+
+#left.crew{
+    left: 5%;
+}
+
+#right.crew{
+    right: 5%;
+}
+
+@keyframes rotation-crew-forward {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes rotation-crew-backward {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(-360deg);
+    }
+}
+
+
+.crew-elements{
+    position: relative;
+    height: 100%;
+}
+
+.horizontal{
+    position: absolute;
+    height: 4px;
+    width: 60%;
+    top: calc(50% - 2px);
+    left: 20%;
+    background-color: gray;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.vertical{
+    position: absolute;
+    width: 4px;
+    height: 60%;
+    top: 20%;
+    left: calc(50% - 2px);
+    background-color: gray;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#controls{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 250;
+}
+
+#backward, #forward{
+    color: #444;
+    font-weight: bolder;
+    font-size: 40px;
+    text-shadow:  0 1px 3px rgba(0,0,0,0.12);
+    cursor: pointer;
+}
+
+#backward:hover, #forward:hover{
+    text-shadow:  0px 0px 3px rgba(255,255,255,1);
+}
+
+#index{
+    padding: 10px 25px;
+    background-color: #444;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24);
+    font-family: var(--font-digital);
+    color: cyan;
+    font-weight: bolder;
+    border-radius: 3px;
+    text-align: center;
+}

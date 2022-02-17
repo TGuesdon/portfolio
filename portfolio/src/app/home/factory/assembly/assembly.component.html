@@ -1,0 +1,54 @@
+<div id="assembly">
+    <div id="assembly-elements">
+        <div id="hidder">
+            <div id="top"
+                [class.animate-forward]="stateService.isAssemblyRotating === 1"
+                [class.animate-backward]="stateService.isAssemblyRotating === -1"
+            ></div>
+            <div id="bottom"
+                [class.animate-forward]="stateService.isAssemblyRotating === 1"
+                [class.animate-backward]="stateService.isAssemblyRotating === -1"
+            ></div>
+        </div>
+
+        <div id="left-pole"
+            [class.open-left-pole]="stateService.openingPole === true"
+            [class.opened-left-pole]="stateService.poleOpened === true"
+            [class.close-left-pole]="stateService.closingPole === true && stateService.poleOpened === true">
+        </div>
+        <div id="right-pole"
+            [class.open-right-pole]="stateService.openingPole === true"
+            [class.opened-right-pole]="stateService.poleOpened === true"
+            [class.close-right-pole]="stateService.closingPole === true && stateService.poleOpened === true">
+        </div>
+
+        <div id="central">
+            <div id="central-elements">
+                <div id="left" class="crew" 
+                    [class.crew-forward]="stateService.isAssemblyRotating === 1"
+                    [class.crew-backward]="stateService.isAssemblyRotating === -1"
+                >
+                    <div class="crew-elements">
+                        <div class="horizontal"></div>
+                        <div class="vertical"></div>
+                    </div>
+                </div>
+                <div id="controls">
+                    <div id="backward" (click)="stateService.previousProject()">&lt;</div>
+                    <div id="index">{{stateService.projectIndex + 1}} : {{ stateService.projects.length }}</div>
+                    <div id="forward" (click)="stateService.nextProject()">&gt;</div>
+                </div>
+                <div id="right" class="crew" 
+                    [class.crew-forward]="stateService.isAssemblyRotating === 1"
+                    [class.crew-backward]="stateService.isAssemblyRotating === -1"
+                >
+                    <div class="crew-elements">
+                        <div class="horizontal"></div>
+                        <div class="vertical"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
