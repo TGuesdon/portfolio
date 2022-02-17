@@ -73,17 +73,18 @@
 #left-pole{
     /* relative to assembly-elements */
     position: absolute;
-    background: red;
+    background: silver;
     height: 40px;
-    width: 500px;
+    width: 600px;
     top: calc(5vh - 20px);
     left: 6%;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transform-origin: 20px 20px;
+    border-radius: 3px;
 }
 
 .open-left-pole{
-    animation: left-pole-open 1.5s linear forwards;
+    animation: left-pole-open 1.5s ease forwards;
 }
 
 .opened-left-pole{
@@ -91,7 +92,7 @@
 }
 
 .close-left-pole{
-    animation: left-pole-close 1.5s linear forwards;
+    animation: left-pole-close 1.5s ease forwards;
 }
 
 @keyframes left-pole-open {
@@ -115,17 +116,18 @@
 #right-pole{
     /* relative to assembly-elements */
     position: absolute;
-    background: red;
+    background: silver;
     height: 40px;
-    width: 500px;
+    width: 600px;
     top: calc(5vh - 20px);
     right: 6%;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transform-origin: calc(100% - 20px) 20px;
+    border-radius: 3px;
 }
 
 .open-right-pole{
-    animation: right-pole-open 1.5s linear forwards;
+    animation: right-pole-open 1.5s ease forwards;
 }
 
 .opened-right-pole{
@@ -133,7 +135,7 @@
 }
 
 .close-right-pole{
-    animation: right-pole-close 1.5s linear forwards;
+    animation: right-pole-close 1.5s ease forwards;
 }
 
 @keyframes right-pole-open {
@@ -151,6 +153,44 @@
     }
     to{
         transform: rotateZ(0deg);
+    }
+}
+
+#screen{
+    position: absolute;
+    /* 580px = 600px ( height of poles ) - 20px ( distance to center of rotation ) */
+    top: calc(50% - 580px);
+    left: calc(6% + 40px);
+    width: calc(88% - 80px);
+    height: 500px;
+}
+
+#screen-elements{
+    position: relative;
+    background-color: rgba(14, 73, 107, 0.3);
+    height: 100%;
+    margin-top: 15px;
+    box-sizing: border-box;
+    animation: screen-appear 1s forwards;    
+}
+
+@keyframes screen-appear {
+    from{
+        width: 0%;
+    }
+    10%{
+        border-left: solid 1px cyan;
+        box-shadow: inset 5px 0px -5px 15px rgba(0, 255, 255, 0.3);
+        width: 0%;
+    }
+    99%{
+        border-right: solid 0px cyan;
+    }
+    to{
+        border-left: solid 1px cyan;
+        border-right: solid 1px cyan;
+        width: 100%;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24), inset 10px 0px 15px -15px cyan, inset -10px 0px 15px -15px cyan;
     }
 }
 

@@ -22,6 +22,12 @@
             [class.close-right-pole]="stateService.closingPole === true && stateService.poleOpened === true">
         </div>
 
+        <div *ngIf="stateService.poleOpened === true && stateService.closingPole === false && stateService.openingPole === false" id="screen">
+            <div id="screen-elements">
+
+            </div>
+        </div>
+
         <div id="central">
             <div id="central-elements">
                 <div id="left" class="crew" 
@@ -49,6 +55,5 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
