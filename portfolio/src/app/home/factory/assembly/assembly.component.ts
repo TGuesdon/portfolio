@@ -11,6 +11,7 @@ export class AssemblyComponent implements OnInit {
   constructor(public stateService: StateService) { }
 
   ngOnInit(): void {
+    this.stateService.initScreen();
   }
 
 }

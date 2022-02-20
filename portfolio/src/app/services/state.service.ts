@@ -36,6 +36,15 @@ export class StateService {
     }, 1000)
   }
 
+  public initScreen(){
+    if(this.isAssemblyRotating != 0){
+      return;
+    }
+
+    this.isAssemblyRotating = 1;
+    this.openPole();
+  }
+
   public nextProject(){
     if(this.isAssemblyRotating != 0){
       return;
@@ -49,19 +58,7 @@ export class StateService {
     }
 
     /** Pole management */
-    if(this.poleOpened){
-      this.closingPole = true;
-    }
-    setTimeout(() => {
-      this.closingPole = false;
-      this.openingPole = true;
-    }, 1500);
-
-    setTimeout(()=> {
-      this.isAssemblyRotating = 0;
-      this.poleOpened = true;
-      this.openingPole = false;
-    }, 3000)
+    this.openPole();
   }
 
   public previousProject(){
@@ -77,6 +74,10 @@ export class StateService {
     }
 
     /** Pole management */
+    this.openPole();
+  }
+
+  public openPole(){
     if(this.poleOpened){
       this.closingPole = true;
     }
