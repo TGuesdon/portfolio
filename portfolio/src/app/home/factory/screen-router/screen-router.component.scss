@@ -3,6 +3,7 @@
     animation: appear linear 1s forwards;
     font-family: var(--font-text);
     text-align: justify;
+    color: white;
 }
 
 @keyframes appear {
@@ -14,5 +15,71 @@
     }
     to{
         opacity: 1;
+    }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.8721321;
+    }
+    5% {
+        opacity: .9713514;
+    }
+    10% {
+        opacity: .9965131;
+    }
+    15% {
+        opacity: .971654;
+    }
+    20% {
+        opacity: .8821915;
+    }
+    25% {
+        opacity: .9951623;
+    }
+    30% {
+        opacity: .9861315;
+    }
+    35% {
+        opacity: .973213;
+    }
+    40% {
+        opacity: .871296519;
+    }
+    45% {
+        opacity: .991813;
+    }
+    50% {
+        opacity: .9832165;
+    }
+    55% {
+        opacity: .985613;
+    }
+    60% {
+        opacity: .974546;
+    }
+    65% {
+        opacity: .9832165;
+    }
+    70% {
+        opacity: .9961328;
+    }
+    75% {
+        opacity: .9832165;
+    }
+    80% {
+        opacity: .973213;
+    }
+    85% {
+        opacity: .981813;
+    } 
+    90% {
+        opacity: .985613;
+    }
+    95% {
+        opacity: .984564;
+    }
+    100% {
+        opacity: .994546;
     }
 }

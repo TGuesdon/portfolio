@@ -171,7 +171,7 @@
     height: 100%;
     margin-top: 15px;
     box-sizing: border-box;
-    animation: screen-appear 1s forwards;    
+    animation: screen-appear 1s forwards, flicker 0.3s infinite;    
 }
 
 @keyframes screen-appear {
@@ -192,6 +192,72 @@
         width: 100%;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24), inset 10px 0px 15px -15px cyan, inset -10px 0px 15px -15px cyan;
     }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.9721321;
+   }
+    5% {
+        opacity: .9713514;
+   }
+    10% {
+        opacity: .9965131;
+   }
+    15% {
+        opacity: .971654;
+   }
+    20% {
+        opacity: .9821915;
+   }
+    25% {
+        opacity: .9951623;
+   }
+    30% {
+        opacity: .9861315;
+   }
+    35% {
+        opacity: .973213;
+   }
+    40% {
+        opacity: .971296519;
+   }
+    45% {
+        opacity: .991813;
+   }
+    50% {
+        opacity: .9832165;
+   }
+    55% {
+        opacity: .985613;
+   }
+    60% {
+        opacity: .974546;
+   }
+    65% {
+        opacity: .9832165;
+   }
+    70% {
+        opacity: .9961328;
+   }
+    75% {
+        opacity: .9832165;
+   }
+    80% {
+        opacity: .973213;
+   }
+    85% {
+        opacity: .981813;
+   }
+    90% {
+        opacity: .985613;
+   }
+    95% {
+        opacity: .984564;
+   }
+    100% {
+        opacity: .994546;
+   }
 }
 
 #central{
