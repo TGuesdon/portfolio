@@ -37,19 +37,11 @@ export class StateService {
   }
 
   public initScreen(){
-    if(this.isAssemblyRotating != 0){
-      return;
-    }
-
     this.isAssemblyRotating = 1;
     this.openPole();
   }
 
   public nextProject(){
-    if(this.isAssemblyRotating != 0){
-      return;
-    }
-
     this.isAssemblyRotating = 1;
         
     this.projectIndex ++;
@@ -62,10 +54,6 @@ export class StateService {
   }
 
   public previousProject(){
-    if(this.isAssemblyRotating != 0){
-      return;
-    }
-
     this.isAssemblyRotating = -1;
     
     this.projectIndex --;

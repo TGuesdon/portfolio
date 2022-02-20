@@ -299,6 +299,7 @@
     font-size: 40px;
     text-shadow:  0 1px 3px rgba(0,0,0,0.12);
     cursor: pointer;
+    user-select: none;
 }
 
 #backward:hover, #forward:hover{
