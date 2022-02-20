@@ -41,7 +41,14 @@
                 </div>
                 <div id="controls">
                     <div id="backward" (click)="stateService.previousProject()">&lt;</div>
-                    <div id="index">{{stateService.projectIndex + 1}} : {{ stateService.projects.length }}</div>
+                    <div id="index">
+                        <div id="page">
+                            {{stateService.projects[stateService.projectIndex]}}
+                        </div>
+                        <div id="count">
+                            {{stateService.projectIndex + 1}} : {{ stateService.projects.length }}
+                        </div>
+                    </div>
                     <div id="forward" (click)="stateService.nextProject()">&gt;</div>
                 </div>
                 <div id="right" class="crew" 

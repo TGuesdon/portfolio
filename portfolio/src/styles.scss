@@ -13,8 +13,13 @@ body{
     src: url(assets/digital.ttf);
 }
 
+@font-face{
+    font-family: NotoSansJP;
+    src: url(assets/NotoSansJP-Regular.otf);
+}
 
 html{
     --font-tag: Tag;
     --font-digital: Digital;
+    --font-text: NotoSansJP;
 }

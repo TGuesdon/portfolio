@@ -1,6 +1,8 @@
 #router-content{
     padding: 15px;
     animation: appear linear 1s forwards;
+    font-family: var(--font-text);
+    text-align: justify;
 }
 
 @keyframes appear {
