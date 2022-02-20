@@ -1,0 +1,15 @@
+<ng-scrollbar style="height: 500px">
+    <div id="router-content">
+        <app-cv *ngIf="page === 'cv'"></app-cv>
+        <app-twitchparty *ngIf="page === 'twitchparty'"></app-twitchparty>
+        <app-idealtek *ngIf="page === 'idealtek'"></app-idealtek>
+        <app-photocleaner *ngIf="page === 'photocleaner'"></app-photocleaner>
+        <app-spaceconquest *ngIf="page === 'spaceconquest'"></app-spaceconquest>
+        <app-menulib *ngIf="page === 'menulib'"></app-menulib>
+        <app-mashuphelper *ngIf="page === 'mashuphelper'"></app-mashuphelper>
+        <app-blindtestrap *ngIf="page === 'blindtestrap'"></app-blindtestrap>
+        <app-buildideas *ngIf="page === 'buildideas'"></app-buildideas>
+        <app-planetgenerator *ngIf="page === 'planetgenerator'"></app-planetgenerator>
+        <app-finalschoolproject *ngIf="page === 'finalschoolproject'"></app-finalschoolproject>
+    </div>
+</ng-scrollbar>

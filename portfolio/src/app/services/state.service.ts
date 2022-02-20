@@ -10,7 +10,7 @@ export class StateService {
   public rotatingLever: boolean = false;
 
   public projectIndex: number = 0;
-  public projects: string[] = ['CV', 'TwitchParty', 'Idealtek'];
+  public projects: string[] = ['cv', 'twitchparty', 'idealtek', 'photocleaner', 'spaceconquest', 'menulib', 'mashuphelper', 'blindtestrap', 'buildideas', 'planetgenerator', 'finalschoolproject'];
   
   /** 0 : Idle, -1 : Rotating backward, 1 : Rotating forward */
   public isAssemblyRotating: number = 0;

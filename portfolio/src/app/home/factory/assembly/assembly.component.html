@@ -24,7 +24,7 @@
 
         <div *ngIf="stateService.poleOpened === true && stateService.closingPole === false && stateService.openingPole === false" id="screen">
             <div id="screen-elements">
-
+                <app-screen-router [page]="stateService.projects[stateService.projectIndex]"></app-screen-router>
             </div>
         </div>
 
