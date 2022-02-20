@@ -1,4 +1,16 @@
 #router-content{
     padding: 15px;
-    color: white;
+    animation: appear linear 1s forwards;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    99%{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
