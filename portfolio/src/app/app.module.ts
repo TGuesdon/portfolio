@@ -20,6 +20,7 @@ import { BlindtestrapComponent } from './home/factory/pages/blindtestrap/blindte
 import { BuildideasComponent } from './home/factory/pages/buildideas/buildideas.component';
 import { PlanetgeneratorComponent } from './home/factory/pages/planetgenerator/planetgenerator.component';
 import { FinalschoolprojectComponent } from './home/factory/pages/finalschoolproject/finalschoolproject.component';
+import { TankComponent } from './home/factory/tank/tank.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { FinalschoolprojectComponent } from './home/factory/pages/finalschoolpro
     BlindtestrapComponent,
     BuildideasComponent,
     PlanetgeneratorComponent,
-    FinalschoolprojectComponent
+    FinalschoolprojectComponent,
+    TankComponent
   ],
   imports: [
     BrowserModule,
