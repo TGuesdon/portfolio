@@ -1,0 +1,35 @@
+#socials-container{
+    position: absolute;
+    left: 80%;
+    width: 15%;
+    top: 25vh;
+    height: 20vh;
+}
+
+#socials-content{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: silver;
+    border-left: rgba(100,100,100,1) 5px solid;
+    border-right: rgba(100,100,100,1) 5px solid;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.wip{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(105deg, rgba(100,100,100,1) 0%, rgba(100,100,100,1) 11%, rgba(248,255,67,1) 11%, rgba(248,255,67,1) 22%, rgba(100,100,100,1) 22%, rgba(100,100,100,1) 33%, rgba(248,255,67,1) 33%, rgba(248,255,67,1) 44%, rgba(248,255,67,1) 44%, rgba(100,100,100,1) 44%, rgba(100,100,100,1) 55%, rgba(248,255,67,1) 55%, rgba(248,255,67,1) 66%, rgba(100,100,100,1) 66%, rgba(100,100,100,1) 77%, rgba(248,255,67,1) 77%, rgba(248,255,67,1) 88%, rgba(100,100,100,1) 88%);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.social{
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+}
