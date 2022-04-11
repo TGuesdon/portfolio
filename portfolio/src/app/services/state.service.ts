@@ -41,6 +41,18 @@ export class StateService {
     this.openPole();
   }
 
+  public changeProjectIndex(idx: number){
+    if(idx > this.projects.length || idx < 0){
+      console.error("Asked for projects idx : " + idx + " which doesn't exist");
+    }
+
+    this.isAssemblyRotating = idx > this.projectIndex ? 1 : -1;
+
+    this.projectIndex = idx;
+
+    this.openPole();
+  }
+
   public nextProject(){
     this.isAssemblyRotating = 1;
         

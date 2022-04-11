@@ -1,0 +1,33 @@
+#browser-container{
+    position: absolute;
+    left: 80%;
+    width: 15%;
+    top: 45vh;
+    background-color: #222;
+    border-radius: 6px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), inset 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+#browser-content{
+    position: relative;
+    padding: 10px 25px;
+    color: cyan;
+}
+
+.project{
+    padding: 3px 0;
+    border-bottom: solid 1px #333;
+    cursor: pointer;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.project:hover{
+    font-weight: bolder;
+}
+
+.cursor{
+    padding-right: 5px;
+}

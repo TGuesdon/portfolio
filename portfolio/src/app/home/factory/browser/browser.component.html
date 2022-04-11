@@ -1,0 +1,8 @@
+<div id="browser-container">
+    <div id="browser-content">
+        <div class="project" *ngFor="let project of stateService.projects; let i = index;">
+            <span class="cursor" *ngIf="stateService.projects[stateService.projectIndex] === project">></span>
+            <span (click)="stateService.changeProjectIndex(i);">{{ project }}</span>
+        </div>
+    </div>
+</div>

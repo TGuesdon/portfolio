@@ -22,6 +22,7 @@ import { PlanetgeneratorComponent } from './home/factory/pages/planetgenerator/p
 import { FinalschoolprojectComponent } from './home/factory/pages/finalschoolproject/finalschoolproject.component';
 import { TankComponent } from './home/factory/tank/tank.component';
 import { SocialsComponent } from './home/factory/socials/socials.component';
+import { BrowserComponent } from './home/factory/browser/browser.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { SocialsComponent } from './home/factory/socials/socials.component';
     PlanetgeneratorComponent,
     FinalschoolprojectComponent,
     TankComponent,
-    SocialsComponent
+    SocialsComponent,
+    BrowserComponent
   ],
   imports: [
     BrowserModule,
