@@ -171,7 +171,7 @@
     height: 100%;
     margin-top: 15px;
     box-sizing: border-box;
-    animation: screen-appear 1s forwards, flicker 0.3s infinite;    
+    animation: screen-appear 1s forwards, flicker 0.5s infinite;    
 }
 
 @keyframes screen-appear {
@@ -196,16 +196,16 @@
 
 @keyframes flicker {
     0% {
-        opacity: 0.9721321;
+        opacity: 0.9921321;
    }
     5% {
-        opacity: .9713514;
+        opacity: .9913514;
    }
     10% {
         opacity: .9965131;
    }
     15% {
-        opacity: .971654;
+        opacity: .991654;
    }
     20% {
         opacity: .9821915;
@@ -217,10 +217,10 @@
         opacity: .9861315;
    }
     35% {
-        opacity: .973213;
+        opacity: .983213;
    }
     40% {
-        opacity: .971296519;
+        opacity: .981296519;
    }
     45% {
         opacity: .991813;
@@ -232,7 +232,7 @@
         opacity: .985613;
    }
     60% {
-        opacity: .974546;
+        opacity: .984546;
    }
     65% {
         opacity: .9832165;
@@ -244,7 +244,7 @@
         opacity: .9832165;
    }
     80% {
-        opacity: .973213;
+        opacity: .983213;
    }
     85% {
         opacity: .981813;
