@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-finalschoolproject',
   templateUrl: './finalschoolproject.component.html',
-  styleUrls: ['./finalschoolproject.component.scss']
+  styleUrls: ['./finalschoolproject.component.scss', './../pages.scss']
 })
 export class FinalschoolprojectComponent implements OnInit {
 

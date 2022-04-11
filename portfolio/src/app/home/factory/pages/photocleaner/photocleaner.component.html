@@ -1,1 +1,75 @@
-<p>photocleaner works!</p>
+<h1 class="title">Photocleaner</h1>
+<div class="subtitle">C++, Qt, OpenCV</div>
+
+<h2 class="first">A tool which remove visual defaults from photos</h2>
+<p>
+    TG's E-commerce photo cleaner is an experimental project on which I tested if I could clean ecommerce product photos. In order to do that I used my knowledge from computer vision studies and the openCV library.
+</p>
+<p>
+    This project offers the following functionnalities :
+</p>
+<ul>
+    <li>Background uniformization</li>
+    <li>Illumination correction</li>
+    <li>Object centering</li>
+    <li>Image compression ( W.I.P. )</li>
+    <li>Watermark ( W.I.P. )</li>
+</ul> 
+<p>
+    I used various method coming from computer vision such as global thresholding, adaptative tresholding and CLAHE algorithm. The results shown on this pages use adaptative thresholding. I still have to test canny edge detection, this page will be updated when I do so.
+</p>
+<h2 class="first">Contouring</h2>
+<p>
+    Contouring is the most important functionnality of this project, mainly because it is used for both object centering and background uniformization. An approximate contouring can be used for object centering but a very precise one is needed for background uniformization in order to avoid leftovers, often due to the object's shadow.
+</p>
+<p>
+    I tested global tresholding with Otsu's binarization and adaptative gaussian tresholding to get the contours of the object. Right now the best fit seems to be the adaptative gaussian tresholding, but it still isn't perfect and canny edge detection is left to be tested.
+</p>
+<div class="multiple_img">
+    <div class="gallery">
+        <img src="../../../../../assets/ecommerce-photo-cleaner/contour_1.JPG">
+        <img src="../../../../../assets/ecommerce-photo-cleaner/contour_2.JPG">
+    </div>
+    <div class="caption">
+        Contours detection with adaptative gaussian tresholding
+    </div>
+</div>
+<h2>Object centering</h2>
+<p>
+    Object centering after contour detection is relatively easy, the pixels inside the contour are moved with the difference between the image's center and the contour's center.
+</p>
+<div class="multiple_img">
+    <div class="gallery">
+        <img src="../../../../../assets/ecommerce-photo-cleaner/before_centering_1.JPG">
+        <img src="../../../../../assets/ecommerce-photo-cleaner/after_centering.JPG">
+    </div>
+    <div class="caption">
+        Before and after centering
+    </div>
+</div>
+<h2>Background uniformization</h2>
+<p>
+    As for object centering, the main difficulty of background uniformization is the contour detection. Once this is done, I replace every pixels outside of the contour with white pixels.
+</p>
+<div class="multiple_img">
+    <div class="gallery">
+        <img src="../../../../../assets/ecommerce-photo-cleaner/origin_2.JPG">
+        <img src="../../../../../assets/ecommerce-photo-cleaner/background_2.JPG">
+    </div>
+    <div class="caption">
+        Before and after background uniformization
+    </div>
+</div>
+<h2>Illumination correction</h2>
+<p>
+    The illumination correction fix is in fact an improvement of the image's contrast. I used CLAHE algorithm in order to do this.
+</p>
+<div class="multiple_img">
+    <div class="gallery">
+        <img src="../../../../../assets/ecommerce-photo-cleaner/illumination_2.JPG">
+        <img src="../../../../../assets/ecommerce-photo-cleaner/illumination_1.JPG">
+    </div>
+    <div class="caption">
+        Before and after illumination correction
+    </div>
+</div>

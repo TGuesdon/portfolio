@@ -1,1 +1,86 @@
-<p>idealtek works!</p>
+<h1 class="title">Idealtek</h1>
+<div class="subtitle">Wordpress, MySQL, PhP, Js</div>
+
+<h2 class="first">A Wordpress theme from scratch</h2>
+<p>
+    Idealtek is an e-commerce website selling electric vehicules. Until recently, the website used the Wordpress framework along with a lot of plugin to work as wanted. The high number of plugin and customizations made maintainance difficult. Plus, this also led to a slow and heavy website with lot of useless code loaded. I worked with Julien Piault ( seo expert ) and Jean-Marc Gagnebien ( front web developper ) in order to build a theme from scratch that aim to.
+</p>
+<p>
+    Some features I find interresting are described below. There is a lot more that can be seen on the website if you want.
+</p>
+
+<h2>Functionnalities</h2>
+<p>
+The Idealtek website got all shipped functionnalities of Woocommerce, meaning a product page, a category page and a cart and checkout page. We added various functionnalities described below.
+</p>
+<h3>Ajax product search</h3>
+<p>
+    I replaced Wordpress native searchbar, which search among all posts with an ajax searchbar which only search among products. Creating this searchbar allowed me to discover the Ajax protocol and its integration in a Wordpress environment.
+</p>
+<div class="solo_img">
+    <img src="../../../../../assets/idealtek/search_bar.PNG">
+    <div class="caption">
+        AJAX search bar
+    </div>
+</div>
+<h3>Ajax products filters</h3>
+<p>
+    After discovering Ajax, I used it again to create products filters on category pages. This also allowed me to manipulate Wordpress WP_Query class in depth along with the pagination system. I used Wordpress meta values in the query to fetch the products given the user's input.
+</p>
+<div class="solo_img">
+    <img src="../../../../../assets/idealtek/product_filter.PNG">
+    <div class="caption">
+        Product filtered by autonomy
+    </div>
+</div>
+<h3>Preorder with deposits</h3>
+<p>
+The preorder feature is one of the most advanced feature implemented in this theme, mainly due to the fact that it is allowed to pay a deposit with payment completion later. In order to do that I used products meta value, cart item custom data, cronjob and the wp_mail function.
+</p>
+<div class="solo_img">
+    <img src="../../../../../assets/idealtek/preorder_form.PNG">
+    <div class="caption">
+        Preorder form on product page
+    </div>
+</div>
+<p>
+    The meta value are used to store if a product can be preordered, and the date of availability. I had to go deeper with woocommerce documentation in order to modify the price of the item in the cart. Then, I used a cronjob to check everyday if any order contained a preordered product that is available this day, if so, an email is sent with a payment link.
+</p>
+<h3>MyPangee long-term rental integration</h3>
+<p>
+    MyPangee is a long-term rental provider, but they don't provide a wordpress plugin for integration. I developed our own plugin to interact with their API. The plugin display the minimal price per month on product pages and product thumbnails, and, more essentially, it adds a link on the cart page to the application for long term rental if the cart is compatible.
+</p>
+<div class="solo_img">
+    <img src="../../../../../assets/idealtek/lld_product_thumbnail.PNG">
+    <div class="caption">
+        Price per month displayed on product thumbnail
+    </div>
+</div>
+<h2>Optimization</h2>
+<p>
+    Optimization was one of our main concern while building this website. I used PageSpeed to mesure the performance of the website throughout the development process. On the old Idealtek website, we used various optimization plugin but never got a satisfying result, so this time I tried to integrate various optimization directly in the theme, with some idea coming from the web and some found by myself.
+</p>
+<p>
+    The theme is fully compliant with google web vitals as you can see with those all green images or directly at PageSpeed.
+</p>
+<div class="multiple_img">
+    <div class="gallery">
+        <img src="../../../../../assets/idealtek/mobile_score.PNG">
+        <img src="../../../../../assets/idealtek/desktop_score.PNG">
+    </div>
+    <div class="caption">
+        Mobile and desktop score on pagespeed
+    </div>
+</div>
+<h3>CSS and JS filtering</h3>
+<p>
+    One major issue with most Wordpress theme is that it loads one big CSS file which contains the style for every pages, this is obviously not optimized. I used comparisons on the url to load only the needed css. This easy trick greatly improved the performance.
+</p>
+<h3>Minification</h3>
+<p>
+    Before enqueueing any css or js file, I apply a minification algorithm. This can usually be done with plugin such as WP_Rocket or WP Autoptimize, but I found that way lighter to use only two function instead of a complete plugin.
+</p>
+<h3>Use of WebP</h3>
+<p>
+    WebP is an image format which is lighter than the traditional png and jpg images. It is almost compatible with all used web browser, so it was necessary that we use WebP for our images. Writing an algorithm to convert png and jpg to webP seemed out of the scope of the project, so we used Imagify to optimize our images.
+</p>

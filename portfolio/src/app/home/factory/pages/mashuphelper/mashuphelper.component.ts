@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-mashuphelper',
   templateUrl: './mashuphelper.component.html',
-  styleUrls: ['./mashuphelper.component.scss']
+  styleUrls: ['./mashuphelper.component.scss', './../pages.scss']
 })
 export class MashuphelperComponent implements OnInit {
 
