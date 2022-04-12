@@ -1,1 +1,168 @@
-<p>twitchparty works!</p>
+<h1 class="title">TwitchParty</h1>
+<div class="subtitle">NodeJS, Angular, Firebase, Tmi.JS, Nginx</div>
+
+<h2 class="first">What is TwitchParty ?</h2>
+
+<p>
+    This project allows twitch streamers to take part in various games with their viewers, without any software installation on viewer AND streamer side. 
+    To achieve this, I used an Angular front served with Nginx, which communicates with a Node backend running a twitch bot using Tmi.JS.
+    The twitch bot read the streamer irc channel and communicates any viewer interaction to the Angular application, which then compare the answer to the database, hosted on Firebase.
+</p>
+
+<p>
+    There is currently 6 games available on TwitchParty ( as of April 2022 ). "Premium" account are available for 4$, they provide almost no advantages but help me pay the server bill. 
+</p>
+
+<div class="solo_img">
+    <img src="../../../../../assets/twitch-quizz/home.PNG">
+    <div class="caption">
+        Home screen
+    </div>
+</div>
+
+<h2>Available games</h2>
+
+<h3>Quizz</h3>
+
+<p>
+    This is a general knowledge quizz in which viewers earn points when they get the right answer. Everyone can propose question on a form accessible on the website.
+    There is 1600+ question available right now ( in french ), divided in categories such as mathematics, history, music etc ... Some voluntary people have a "contributor" role, which gives them a screen when they can see their proposed questions and already existing questions.
+</p>
+
+<div class="solo_img">
+    <img src="../../../../../assets/twitch-quizz/quizz.PNG">
+    <div class="caption">
+        Quizz screen
+    </div>
+</div>
+
+<h3>Fairprice</h3>
+
+<p>
+    As in the TV show, in this game the viewers have to guess the price of an object displayed on screen.
+    The different objects are stored in a database that I built using a python script which parses Amazon products.
+</p>
+
+<div class="solo_img">
+    <img src="../../../../../assets/twitch-quizz/fairprice.PNG">
+    <div class="caption">
+        Fairprice screen
+    </div>
+</div>
+
+<h3>Pictionary</h3>
+
+<p>
+    In this game, the streamer draws a randomly picked word, the viewers have to guess the word.
+    In order to have a fun game, we used <a href="http://www.lexique.org/shiny/openlexicon/">Open Lexicon</a>, on which a list of words with an imageability score is available.
+    After some data filtering ( verb, plural, offense, etc ... ) we got a list of words well suited for pictionary. 
+</p>
+
+<p>
+    In order to do the drawing board I used the <a href="https://www.npmjs.com/package/simple-drawing-board">simple-drawing-board</a> library on npm, that I modded to add a fill feature.
+    My version is available on <a href="https://www.npmjs.com/package/@tguesdon/simple-drawing-board">npm</a>.
+</p>
+
+<div class="solo_img">
+    <img src="../../../../../assets/twitch-quizz/pictionary.PNG">
+    <div class="caption">
+        Pictionary screen
+    </div>
+</div>
+
+<h3>Trader</h3>
+
+<p>
+    Trader is a game mocking the trading system, the streamer has to get a certain amount of money, and the viewer can either be with or against him.
+    But most of the time it doesn't matter because some random incongruous events occurs and reverse the course of the game. 
+</p>
+
+<div class="solo_img">
+    <img src="../../../../../assets/twitch-quizz/trader.PNG">
+    <div class="caption">
+        Trader screen
+    </div>
+</div>
+
+<h3>Connect4</h3>
+
+<p>
+    This is pretty much self explainatory, connect4, streamer against viewers.
+</p>
+
+<div class="solo_img">
+    <img src="../../../../../assets/twitch-quizz/connect4.PNG">
+    <div class="caption">
+        Connect4 screen
+    </div>
+</div>
+
+<h3>Twitch Inspector</h3>
+
+<p>
+    In this game, the streamer has a list of word that the twitch chat must guess. In order to do this the streamer tell a word which has a close meaning to those that the chat has to guess.
+    This is inspired by the game "Codenames"
+</p>
+
+<div class="solo_img">
+    <img src="../../../../../assets/twitch-quizz/codenames.PNG">
+    <div class="caption">
+        Twitch inspector screen
+    </div>
+</div>
+
+<h2>How was it made ?</h2>
+
+<p>
+    The website works thanks to 3 parts :
+</p>
+
+<ul>
+    <li>The database : A firebase project which contains all the data.</li>
+    <li>The server :  A NodeJS server which is the link between the twitch chat and the client.</li>
+    <li>The client : An Angular client, served with nginx.</li>
+</ul>
+
+<h3>Firebase Database</h3>
+
+<p>
+    This is a classic firebase project, with realtime database used to store data in JSON format and authentication to allow account management on the client. The security of a realtime database is different than a classic SQL Database, as the access are accessible to everyone using the client.
+    I use realtime database access rules which allows me to specify rights on read or write.
+</p>
+
+<h3>NodeJS Server</h3>
+
+<p>
+    The NodeJS uses Tmi.JS to communicate with twitch channel, and then uses Socket.io to communicate with the client. It also contains authentication functions.
+</p>
+
+<h3>Angular Client</h3>
+
+<p>
+    The Angular client is the biggest part of this application. It can be divided into two parts : the back-office and the games. The games are described up ahead.
+</p>
+
+<p>
+    I used angular material to create a clean and ergonomic way to manage our content. It includes quizz questions, fairprice products, users and statistics.
+</p>
+
+<div class="solo_img">
+    <img src="../../../../../assets/twitch-quizz/statistics.PNG">
+    <div class="caption">
+        Statistics view
+    </div>
+</div>
+
+<div class="solo_img">
+    <img src="../../../../../assets/twitch-quizz/questions.PNG">
+    <div class="caption">
+        Questions view
+    </div>
+</div>
+
+<div class="solo_img">
+    <img src="../../../../../assets/twitch-quizz/contributor.PNG">
+    <div class="caption">
+        Contributor view
+    </div>
+</div>
