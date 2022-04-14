@@ -77,19 +77,19 @@
     position: absolute;
     left: 10%;
     width: 80%;
-    max-height: 40vh;
     animation: float 2s infinite;
+    max-height: 60vh;
 }
 
 @keyframes float {
     from{
-        top: 12vh;
+        top: 4vh;
     }
     50%{
-        top: 13vh;
+        top: 5vh;
     }
     to{
-        top: 12vh;
+        top: 4vh;
     }
 }
 

@@ -41,7 +41,10 @@
             <div id="wip-line"></div>
         </div>
     </div>
-    <div id="factory">
+    <div fxShow="true" fxHide.lt-md="true" id="factory">
         <app-factory></app-factory>
+    </div>
+    <div fxShow="true" fxHide.gt-sm="true">
+        <app-mobile></app-mobile>
     </div>
 </div>

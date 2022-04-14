@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -23,6 +24,7 @@ import { FinalschoolprojectComponent } from './home/factory/pages/finalschoolpro
 import { TankComponent } from './home/factory/tank/tank.component';
 import { SocialsComponent } from './home/factory/socials/socials.component';
 import { BrowserComponent } from './home/factory/browser/browser.component';
+import { MobileComponent } from './home/mobile/mobile.component';
 
 @NgModule({
   declarations: [
@@ -45,12 +47,14 @@ import { BrowserComponent } from './home/factory/browser/browser.component';
     FinalschoolprojectComponent,
     TankComponent,
     SocialsComponent,
-    BrowserComponent
+    BrowserComponent,
+    MobileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgScrollbarModule
+    NgScrollbarModule,
+    FlexLayoutModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
