@@ -1,3 +1,16 @@
+@media only screen and (max-width: 960px) {
+    .page-body {
+        min-height: 100vh;
+        background: linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(78,78,78,1) 20%, rgba(78,78,78,1) 80%, rgba(51,51,51,1) 100%);
+        padding: 15px 25px;
+        color: white;
+    }    
+
+    p{
+        text-align: justify;
+    }
+}
+
 .title{
     color: rgb(182, 255, 255);
     margin: 0;
