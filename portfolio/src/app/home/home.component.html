@@ -1,11 +1,11 @@
 <div id="container">
-    <div *ngIf="false" id="curtain" [class.opening]="stateService.openingCurtain === true">
+    <div *ngIf="stateService.curtain" id="curtain" [class.opening]="stateService.openingCurtain === true">
         <div id="curtain-elements">
             <img id="metal" src="./../../assets/images/metal-effect.jpg">
-
-            <div id="name">
+            
+            <!-- <div id="name">
                 Thomas Guesdon
-            </div>
+            </div> -->
 
             <div id="open-button" (click)="stateService.openCurtain()">
                 <div id="open-button-elements" [class.rotating]="stateService.rotatingLever === true">
