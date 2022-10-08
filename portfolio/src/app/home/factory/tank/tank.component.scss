@@ -55,7 +55,6 @@
     height: 60vh;
     left: 10%;
     background-color: rgba(0,255,255,0.3);
-    filter: blur(1px);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5), 0 0 40px #fff, 0 0 150px rgba(0, 255, 255, 0.7);
     z-index: 0;
 }
@@ -64,6 +63,18 @@
     position: relative;
     width: 100%;
     height: 100%;
+    cursor: none;
+}
+
+#cursor{
+    position: absolute;
+    z-index: 999;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: black;
+    transform-origin: 0;
+    mix-blend-mode: soft-light;
 }
 
 #glass{
@@ -77,21 +88,22 @@
     position: absolute;
     left: 10%;
     width: 80%;
-    animation: float 2s infinite;
+    animation: float 2s ease-in-out infinite alternate;
     max-height: 60vh;
+    filter: blur(1px);
+    top: 5vh;
 }
 
 @keyframes float {
-    from{
-        top: 4vh;
+    from {
+        transform: translateY(0vh);
     }
-    50%{
-        top: 5vh;
-    }
-    to{
-        top: 4vh;
+    to {
+        transform: translateY(1vh);
     }
 }
+
+
 
 #top{
     position: absolute;
